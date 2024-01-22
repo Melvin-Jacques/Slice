@@ -1,0 +1,12 @@
+@use 'variable'
+    
+body{
+    background-color: #111827
+    font-family: $font
+    header{
+        background-color: $primary-color
+        display: flex
+        justify-content: space-between
+    }
+}
+
