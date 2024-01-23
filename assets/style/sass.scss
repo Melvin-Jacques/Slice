@@ -1,0 +1,61 @@
+$primary-color : #1F2937;
+$secondary-color : #374151;
+$details-color : #FB8734;
+$font : 'Sofia', sans-serif;
+
+%disf-jusb{
+    display: flex;
+    justify-content: space-between;
+}
+%message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+.message {
+@extend %message-shared;
+}
+
+.success {
+@extend %message-shared;
+border-color: green;
+}
+
+.error {
+@extend %message-shared;
+border-color: red;
+}
+
+.warning {
+@extend %message-shared;
+border-color: yellow;
+}
+@mixin button($details-color){
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #111827;
+    font-family: $font;
+    header{
+        background-color: $primary-color;
+        @include disf-jusb;
+        padding: 0 10% 0 10%;
+        div{
+            @include disf-jusb;
+            .logo{
+                width: 150px;
+                height: auto;
+            }         
+        nav{
+            ul{
+                @include disf-jusb;
+                align-items: center;
+            }
+        }
+        
+    }
+}
+}
