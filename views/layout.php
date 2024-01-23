@@ -36,6 +36,16 @@
     <main>
         <!-- <?php if (!empty($_SESSION)){}
             // $_SESSION['name']['path'] ?> --> Faire la fonction path pour les differents modeles
+        <section class="menu">
+            <div class="card">
+                <h4><b>John Doe</b></h4>
+                <img src="assets/src/pizza_menu.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <p>Architect & Engineer</p>
+                </div>
+            </div>
+        </section>
+        
     </main>
     <footer>
         <div>

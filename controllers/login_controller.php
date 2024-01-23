@@ -1,13 +1,16 @@
 <?php
-
-class User{
-    public function __construct(private string $_name, private $_email, private $_password){
+if(!empty($_POST['email']) && !empty($_POST['password'])){
+    $query = "SELECT * FROM users AS u WHERE u.email = :email AND u.password = :password";
+    $response = $bdd->prepare($query);
+    $response->execute([
+        ":email" => $_POST['email'],
+        ":password" => md5($_POST['password'])
+    ]);
+    $data = $response->fetch();
+    if($_POST['email'] == $data['email']  && $_POST['password'] == $data['password']){
+        header('location: index.php');
     }
-    public function setName($name){$this->_name = $name;}
-    public function setEmail($email){$this->_email = $email;}
-    public function setPassword($password){$this->_password = $password;}
-
-    public function getName(){return $this->_name;}
-    public function getEmail(){return $this->_email;}
-    public function getPassword(){return $this->_password;}
+    else{
+        echo "<p style='color: red;'>Email ou mot de passe incorrect, veuillez réessayer</p>";
+    }
 }

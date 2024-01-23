@@ -3,8 +3,8 @@
 ?>
 <form action='' method='POST'>
     <p>
-        <label>Username</label>
-            <input id='username' value='' name='username' type='text' required='required' /><br>
+        <label>Email</label>
+            <input id='email' value='' name='email' type='text' required='required' /><br>
     </p>
     <p>
         <label>Password</label>
