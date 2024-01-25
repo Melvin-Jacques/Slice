@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slice</title>
-    <link rel="stylesheet" href="assets/style/test.css">
+    <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body>
     <header>
@@ -14,38 +14,42 @@
             <navbar class="navbar">
                 <ul class="navbar">
                     <?php if (!empty($_SESSION)){
-                        if ($_SESSION['email']['password'] == 'admin'){
+                        if ($_SESSION['is_admin']){
                             ?>
-                    <li><a href="#">Administration</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Administration</a>
+                            <div class="dropdown-content">
+                                <a href="#">Liste Commandes</a>
+                                <a href="#">Bénéfices</a>
+                                <a href="#">Menu</a>
+                            </div>
+                    </li>
                     <?php }} ?>
-                    <li><a href="#">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">
                         <?php 
                         if (!empty($_SESSION['name'])){
                             echo $_SESSION['name'];
                         }
                         else{
                             echo 'Customer';
-                        } ?></a></li>
+                        } ?>
+                        </a>
+                            <div class="dropdown-content">
+                                <a href="?page=compte">Compte</a>
+                                <a href="?page=commandes">Commandes</a>
+                                <a href="?page=messages">Messages</a>
+                            </div>
+                        </li>
                     <li><a href="#">Nous contacter</a></li>
                 </ul>
-                <img src="assets/src/gmail.png" class="compte" alt="compte">
+                <a href="?page=login"><img src="assets/src/gmail.png" class="compte" alt="compte"></a>
             </navbar>
             
     </header>
-    <hr/>
+    <hr class="headerhr"/>
     <main>
-        <!-- <?php if (!empty($_SESSION)){}
-            // $_SESSION['name']['path'] ?> --> Faire la fonction path pour les differents modeles
-        <section class="menu">
-            <div class="card">
-                <h4><b>John Doe</b></h4>
-                <img src="assets/src/pizza_menu.jpg" alt="Avatar" style="width:100%">
-                <div class="container">
-                    <p>Architect & Engineer</p>
-                </div>
-            </div>
-        </section>
-        
+        <?php require "controllers/". $routes. "_controller.php"; ?>
     </main>
     <footer>
         <div>

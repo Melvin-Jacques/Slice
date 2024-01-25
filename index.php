@@ -2,7 +2,14 @@
 
 session_start();
 include 'controllers/connexion_bdd_controller.php';
-include 'views/layout.php';
-include_once 'controllers/controller.php';
-$controller = new Controller();
-$controller->invoke();
+
+$availableRoutes=['home', 'admin', 'login', 'logout', 'register', 'basket','products','commandes'];
+
+$routes = 'home';
+
+if (isset($_GET['page']) && in_array($_GET['page'], $availableRoutes)) {
+    $route = $_GET['page'];
+}
+
+
+require './views/layout.php';
