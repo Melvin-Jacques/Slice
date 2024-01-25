@@ -4,12 +4,12 @@
         <h1>Register</h1>
         <form action="" method="POST">
             <div class="txt_field">
-                <input value="username" type="text" name="text" required>
+                <input value="username" type="text" name="username" required>
                 <span></span>
                 <label>Username</label>
             </div>
             <div class="txt_field">
-                <input value="username" type="text" name="text" required>
+                <input value="username" type="email" name="email" required>
                 <span></span>
                 <label>Email</label>
             </div>

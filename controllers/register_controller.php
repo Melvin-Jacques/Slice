@@ -1,3 +1,4 @@
 <?php 
 echo "redirection register ok";
-require "models/register.php";
+
+require "views/register.php";

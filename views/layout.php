@@ -9,12 +9,12 @@
 <body>
     <header>
             <div>
-                <img class="logo" src="assets/src/slice.png" alt="logo">
+                <a href="?route=home"><img class="logo" src="assets/src/slice.png" alt="logo"></a>
             </div>
             <navbar class="navbar">
                 <ul class="navbar">
                     <?php if (!empty($_SESSION)){
-                        if ($_SESSION['is_admin']){
+                        if ($_SESSION['user']['is_admin']){
                             ?>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">Administration</a>
@@ -28,8 +28,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropbtn">
                         <?php 
-                        if (!empty($_SESSION['name'])){
-                            echo $_SESSION['name'];
+                        if (!empty($_SESSION)){
+                            echo $_SESSION['user']['username'];
                         }
                         else{
                             echo 'Customer';
@@ -49,7 +49,7 @@
     </header>
     <hr class="headerhr"/>
     <main>
-        <?php require "controllers/". $routes. "_controller.php"; ?>
+        <?php require "controllers/". $route. "_controller.php"; ?>
     </main>
     <footer>
         <div>
