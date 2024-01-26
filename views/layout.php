@@ -36,12 +36,16 @@
                         } ?>
                         </a>
                             <div class="dropdown-content">
-                                <a href="?page=compte">Compte</a>
-                                <a href="?page=commandes">Commandes</a>
-                                <a href="?page=messages">Messages</a>
+                                <a href="?page=compte">Commandes</a>
+                                <a href="?page=commandes">Messages</a>
+                                <?php if(!empty($_SESSION)){ ?>
+                                    <a href="?page=home"><?php session_destroy(); ?>Déconnexion</a>
+                                <?php } ?>
                             </div>
                         </li>
                     <li><a href="#">Nous contacter</a></li>
+                    <li class="panierCount"><p class="panierCount2">0</p></li>
+                    <li><a href="?page=basket"><img  class="panierlogo" src="assets/src/shoppinglogo.png" alt="shopping-logo.png"></a></li>
                 </ul>
                 <a href="?page=login"><img src="assets/src/gmail.png" class="compte" alt="compte"></a>
             </navbar>
@@ -49,6 +53,7 @@
     </header>
     <hr class="headerhr"/>
     <main>
+        
         <?php require "controllers/". $route. "_controller.php"; ?>
     </main>
     <footer>
@@ -59,4 +64,4 @@
         </div>
     </footer>
 </body>
-</html>
+</html

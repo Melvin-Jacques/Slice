@@ -6,7 +6,7 @@ include 'controllers/connexion_bdd_controller.php';
 echo password_hash("user", PASSWORD_DEFAULT);
 
 
-$availableRoutes=['home', 'admin', 'login', 'logout', 'register', 'basket','products','commandes'];
+$availableRoutes=['home', 'admin', 'login', 'logout', 'register', 'basket','produits','commandes'];
 
 $route = 'home';
 
