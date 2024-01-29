@@ -1,4 +1,10 @@
 <?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
+    echo '<pre>';
+    print_r($_POST['name']);
+    echo '</pre>';
+}
 if(!empty($_POST['email']) && !empty($_POST['password'])){
     $query = "SELECT * FROM users WHERE email = :email ";
     $response = $bdd->prepare($query);

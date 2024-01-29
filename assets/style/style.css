@@ -1,191 +1,242 @@
 /* *{
     border: 1px solid red;
 } */
-body{
-    padding: 0;
-    margin: 0;
-    background-color: #111827;
-    font-family: 'Sofia', sans-serif;
-    color: white;
-    
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #111827;
+  font-family: 'Sofia', sans-serif;
+  color: white;
+
 }
+
 /* HEADER */
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #1F2937;
-    padding: 0 10% 0 10%;
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1F2937;
+  padding: 0 10% 0 10%;
 }
-.logo{
-    width: 70px;
-    height: auto;
-    margin: 1em 0 1em 0;
+
+.logo {
+  width: 70px;
+  height: auto;
+  margin: 1em 0 1em 0;
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
-.navbar li{
-    padding: 0 1em 0 1em;
-    list-style: none;
+
+.navbar li {
+  padding: 0 1em 0 1em;
+  list-style: none;
 }
-.navbar li a{
-    font-weight: 400;
-    font-size: medium;
-    text-decoration: none;
-    color: white;
+
+.navbar li a {
+  font-weight: 400;
+  font-size: medium;
+  text-decoration: none;
+  color: white;
 }
-.dropbtn:hover{
-    color: #FB8734;
+
+.dropbtn:hover {
+  color: #FB8734;
 }
+
 .dropbtn {
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
 }
+
 .dropdown {
-position: relative;
-display: inline-block;
+  position: relative;
+  display: inline-block;
 }
+
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #374151;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #374151;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
+
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
-.dropdown-content a:hover {background-color: #FB8734; border-radius: 5px ;}
-.dropdown:hover .dropdown-content {display: block; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; border-top-right-radius: 5px;}
-.dropdown:hover .dropbtn {background-color: #374151; border-radius: 5px;}
-.compte{
-    border-radius: 50%;
-    width: 42px;
-    height: 40px;
+
+.dropdown-content a:hover {
+  background-color: #FB8734;
+  border-radius: 5px;
 }
-.panierCount{
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #374151;
+  border-radius: 5px;
+}
+
+.compte {
+  border-radius: 50%;
+  width: 42px;
+  height: 40px;
+}
+
+.panierCount {
   display: flex;
   justify-content: center;
 }
-.panierCount2{
+
+.panierCount2 {
   /* display: none; */
   padding: 0.25em 0.5em 0.25em 0.5em;
   border-radius: 50px;
   background-color: #FB8734;
 }
-.panierlogo{
+
+.panierlogo {
   width: 30px;
   height: auto;
 }
-.headerhr{
-    color: #374151;
-    padding: 0%;
-    margin: 0%;
+
+.headerhr {
+  color: #374151;
+  padding: 0%;
+  margin: 0%;
 }
+
 /* MAIN */
-.main{
+.main {
   display: flex;
   justify-content: center;
 }
+
 /* MENU  &  PRODUITS*/
-.menu{
-    background-color: #1F2937;
-    margin: 4em 10% 4em 10%;
-    display: flex;
-    border-radius: 20px;
-    justify-content: space-around;
+.menu {
+  background-color: #1F2937;
+  margin: 4em 10% 4em 10%;
+  display: flex;
+  border-radius: 20px;
+  justify-content: space-around;
 }
-.card{
-    margin: 2em 0 2em 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 30%;
-    border: 1px solid #374151;
-    border-radius: 15px;
-    text-align: center;
+
+.card {
+  margin: 2em 0 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 30%;
+  border: 1px solid #374151;
+  border-radius: 15px;
+  text-align: center;
 }
-.productCard{
+
+.productCard {
   align-items: stretch;
 }
-.card h2{
-    text-align: center;
-    margin: 0.35em  0 0.35em 0;
+
+.card h2 {
+  text-align: center;
+  margin: 0.35em 0 0.35em 0;
 }
-.menuImg{
-    width: 30%;
-    height: auto;
-    border-radius: 10px;
+
+.menuImg {
+  width: 30%;
+  height: auto;
+  max-height: 60%;
+  border-radius: 10px;
 }
-.container{
-    text-align: center;
+
+.container {
+  text-align: center;
 }
-.description{
+
+.description {
   font-weight: 500;
   padding: 0 1em 0 1em;
 }
-.valeurNutri{
+
+.valeurNutri {
   color: #666666;
 }
-.divAcces{
-    padding: 0.75em 0.75em 1.75em 0.75em;
-    
-}
-.btnAcces{
-    background-color: #FB8734;
-    border-radius: 10px;
-    padding: 0.75em;
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
-}
-@media screen and (max-width: 900px){
-    .menu{
-        flex-direction: column;
-        margin: 2em;
-    }
-    .card{
-        max-width: none;
-    }
-    .menuImg{
-        height: min-content;
-    }
-}
-/* LOGIN */
 
-.center{
+.divAcces {
+  padding: 0.75em 0.75em 1.75em 0.75em;
+
+}
+
+.btnAcces {
+  background-color: #FB8734;
+  border-radius: 10px;
+  padding: 0.75em;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+    flex-direction: column;
+    margin: 2em;
+  }
+
+  .card {
+    max-width: none;
+  }
+
+  .menuImg {
+    height: min-content;
+  }
+}
+
+/* LOGIN */
+.login {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
   width: 29vw;
   background: #374151;
   border-radius: 10px;
 }
 
-.center h1{
+.center h1 {
   text-align: center;
   padding: 20px 0 20px 0;
   border-bottom: 1px solid silver;
 }
 
-.center form{
+.center form {
   padding: 0 40px;
   box-sizing: border-box;
 }
 
-form .txt_field{
+form .txt_field {
   position: relative;
   border-bottom: 2px solid #adadad;
+  color: white;
+  ;
   margin: 30px 0;
 }
 
-.txt_field input{
+.txt_field input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -195,7 +246,7 @@ form .txt_field{
   outline: none;
 }
 
-.txt_field label{
+.txt_field label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -205,7 +256,7 @@ form .txt_field{
   pointer-events: none;
 }
 
-.txt_field span::before{
+.txt_field span::before {
   content: '';
   position: absolute;
   top: 40px;
@@ -216,17 +267,18 @@ form .txt_field{
   transition: .5s;
 }
 
-.txt_field input:focus ~ label,
-.txt_field input:valid ~ label{
+.txt_field input:focus~label,
+.txt_field input:valid~label {
   top: -5px;
   color: #FB8734;
 }
 
-.txt_field input:focus ~ span::before,
-.txt_field input:Valid ~ span::before{
+.txt_field input:focus~span::before,
+.txt_field input:Valid~span::before {
   width: 100%;
 }
-input[type="Submit"]{
+
+input[type="Submit"] {
   width: 100%;
   height: 50px;
   border: 1px solid;
@@ -237,13 +289,13 @@ input[type="Submit"]{
 
 }
 
-input[type="Submit"]:hover{
+input[type="Submit"]:hover {
   background: #FB8734;
   color: #e9f4fb;
   transition: .5s;
 }
 
-.signup_link{
+.signup_link {
   padding-bottom: 1em;
   margin: 30px 0;
   text-align: center;
@@ -251,54 +303,61 @@ input[type="Submit"]:hover{
   color: #666666;
 }
 
-.signup_link a{
+.signup_link a {
   color: #2691d9;
   text-decoration: none;
 }
 
-.signup_link a:hover{
+.signup_link a:hover {
   text-decoration: underline;
 }
 
-.HomeAbout{
+.HomeAbout {
   width: 100vw;
   height: 25vh;
 }
+
 /* PANIER, COMMANDES, CRUD COMMANDES*/
-.panier{
+.panier {
   padding: 1.5em 0 1.5em 0;
 }
-.panier td{
+
+.panier td {
   border: 2px solid #374151;
   padding: 0.5em;
 }
-.row{
+
+.row {
   padding: 0.5em 0 0.5em 0;
 }
-.cell{
+
+.cell {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.cell div{
+
+.cell div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1em 0 1em;
   margin: 0 2em 0 2em;
 }
-.plusminus{
+
+.plusminus {
   text-decoration: none;
   font-weight: bold;
-  color: white ;
+  color: white;
   font-size: larger;
   padding: 0 0.3em 0 0.3em;
 }
+
 /* FOOTER */
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }

@@ -18,7 +18,7 @@
                     <div> test prix total</div>
                     <div>
                         <h2><a href="" class="plusminus">-</a></h2>
-                        <p><a href=""class="plusminus">+</a></p>
+                        <h2><a href=""class="plusminus">+</a></h2>
                     </div>
                 </td>
             </tr>

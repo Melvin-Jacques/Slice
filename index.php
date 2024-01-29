@@ -1,15 +1,16 @@
 <?php
 
 session_start();
+//session_destroy();
 include 'controllers/connexion_bdd_controller.php';
 
-echo password_hash("user", PASSWORD_DEFAULT);
+// echo password_hash("user", PASSWORD_DEFAULT);
+// pour un password
 
 
-$availableRoutes=['home', 'admin', 'login', 'logout', 'register', 'basket','produits','commandes'];
-
+// Routeur
+$availableRoutes=['home', 'admin', 'login', 'logout', 'register', 'basket','produits','commandes', 'error'];
 $route = 'home';
-
 if (isset($_GET['page']) && in_array($_GET['page'], $availableRoutes)) {
     $route = $_GET['page'];
 }

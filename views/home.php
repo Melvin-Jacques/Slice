@@ -7,7 +7,7 @@
                 </div>
                 <div class="container">
                     <div class="divAcces">
-                        <a href="?page=produits" class="btnAcces">Accéder aux pizzas</a>
+                        <a href="?page=produits&id=1" class="btnAcces">Accéder aux pizzas</a>
                     </div>
                 </div>
             </div>
@@ -19,18 +19,18 @@
                 </div>
                 <div class="container">
                     <div class="divAcces">
-                        <a href="?page=produits" class="btnAcces">Accéder aux pizzas</a>
+                        <a href="?page=produits&id=2" class="btnAcces">Accéder aux pizzas</a>
                     </div>
                 </div>
             </div><div class="card">
-                <img src="assets/src/pizza_menu.jpg" class="menuImg" alt="pizza_menu" style="width:100%">
+                <img src="assets/src/soda_menu.jpg" class="menuImg" alt="pizza_menu" style="width:100%">
                 <h2>🥤Boissons🥤</h2>
                 <div class="container">
                     <p>N'oubliez pas de vous désaltérer un coup</p>
                 </div>
                 <div class="container">
                     <div class="divAcces">
-                        <a href="?page=produits" class="btnAcces">Accéder aux pizzas</a>
+                        <a href="?page=produits&id=3" class="btnAcces">Accéder aux pizzas</a>
                     </div>
                 </div>
             </div>
