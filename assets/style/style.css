@@ -99,11 +99,6 @@ header {
 }
 
 .panierCount {
-  display: flex;
-  justify-content: center;
-}
-
-.panierCount2 {
   /* display: none; */
   padding: 0.25em 0.5em 0.25em 0.5em;
   border-radius: 50px;
@@ -171,9 +166,13 @@ header {
   font-weight: 500;
   padding: 0 1em 0 1em;
 }
-
-.valeurNutri {
-  color: #666666;
+.valeurNutriContainer {
+  padding: 0 2em 0 2em;
+}
+.valeurNutri{
+  color: #6d6d6dda;
+  text-align: start;
+  font-size: medium;
 }
 
 .divAcces {
@@ -352,7 +351,24 @@ input[type="Submit"]:hover {
   font-size: larger;
   padding: 0 0.3em 0 0.3em;
 }
-
+/* ERROR */
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.errorMessage{
+  align-items: center;
+  text-align: center;
+}
+.errorMessage img {
+  width: 60%;
+  height: auto;
+}
+.errorMessage p{
+  font-size: large;
+  font-weight: bold;
+}
 /* FOOTER */
 footer {
   display: flex;

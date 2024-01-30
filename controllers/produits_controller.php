@@ -85,6 +85,8 @@
 //     }
 // }
 
+
+
 if (isset($_REQUEST)) {
     $request = "SELECT produits.id AS produit_id, produits.name AS produit_nom, produits.description AS produit_description, produits.price AS produit_prix, produits.pic_name AS produit_image,
                  ingredients.id AS ingredient_id, ingredients.name AS ingredient_nom, ingredients.calories AS ingredient_calories, ingredients.weight AS ingredient_poids
@@ -120,7 +122,7 @@ if (isset($_REQUEST)) {
         }
 
         if ($row['ingredient_id'] !== null) {
-            $produits[$produitId]['ingredients'] = [
+            $produits[$produitId]['ingredients'][] = [
                 'id' => $row['ingredient_id'],
                 'nom' => $row['ingredient_nom'],
                 'calories' => $row['ingredient_calories'],

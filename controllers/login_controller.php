@@ -1,5 +1,11 @@
 <?php
 
+//Message de création de profil
+if (isset($_SESSION['success_message'])) {
+    echo '<script>alert("' . $_SESSION['success_message'] . '")</script>';
+    unset($_SESSION['success_message']);
+}
+//erreur d'internale servor a regler sur le register_controller
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
     echo '<pre>';
     print_r($_POST['name']);

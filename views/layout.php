@@ -45,8 +45,8 @@
                     </div>
                 </li>
                 <li><a href="#">Nous contacter</a></li>
-                <li class="panierCount">
-                    <p class="panierCount2">0</p>
+                <li>
+                    <p class="panierCount">0</p>
                 </li>
                 <li><a href="?page=basket"><img class="panierlogo" src="assets/src/shoppinglogo.png" alt="shopping-logo.png"></a></li>
             </ul>
