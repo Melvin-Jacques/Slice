@@ -129,6 +129,7 @@ header {
   display: flex;
   border-radius: 20px;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -140,6 +141,7 @@ header {
   border: 1px solid #374151;
   border-radius: 15px;
   text-align: center;
+  flex: 0 0 30%;
 }
 
 .productCard {
@@ -187,6 +189,10 @@ header {
   text-decoration: none;
   color: white;
   font-weight: bolder;
+}
+.btnAcces:hover {
+  background-color: #ff7b1d;
+  box-shadow: 3px 1px 15px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 900px) {

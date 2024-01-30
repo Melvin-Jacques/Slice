@@ -3,6 +3,9 @@ session_start();
 //session_destroy();
 include 'controllers/connexion_bdd_controller.php';
 
+require 'classes/Ingredient.php';
+require 'classes/Produit.php';
+require 'classes/ProduitManager.php';
 // echo password_hash("user", PASSWORD_DEFAULT);
 // pour un password
 

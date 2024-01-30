@@ -19,6 +19,11 @@
                         <span></span>
                         <label>Password</label>
                     </div>
+                    <div class="txt_field">
+                        <input type="password" name="password_confirmation" required>
+                        <span></span>
+                        <label>Password Confirmation</label>
+                    </div>
                     <input name="submit" type="Submit" value="Register">
                     <div class="signup_link">
                         Already registered ? <a href="?page=login">Login</a>

@@ -19,9 +19,9 @@
                         <li class="dropdown">
                             <a href="#" class="dropbtn">Administration</a>
                             <div class="dropdown-content">
-                                <a href="#">Liste Commandes</a>
-                                <a href="#">Bénéfices</a>
-                                <a href="#">Menu</a>
+                                <a href="?page=error" style="color:crimson">Liste Commandes</a>
+                                <a href="?page=error" style="color: crimson;">Bénéfices</a>
+                                <a href="?page=error" style="color: crimson;">Menu</a>
                             </div>
                         </li>
                 <?php } ?>
@@ -35,8 +35,8 @@
                         } ?>
                     </a>
                     <div class="dropdown-content">
-                        <a href="?page=compte">Commandes</a>
-                        <a href="?page=commandes">Messages</a>
+                        <a href="?page=compte" style="color: crimson;">Commandes</a>
+                        <a href="?page=commandes" style="color: crimson;">Messages</a>
                         <?php if (!empty($_SESSION['user'])) { ?>
                             <a href="?page=home&logout=1">Déconnexion</a>
                         <?php } else {?>
@@ -44,7 +44,7 @@
                         <?php } ?>
                     </div>
                 </li>
-                <li><a href="#">Nous contacter</a></li>
+                <li><a href="?page=error" style='color:crimson;'>Nous contacter</a></li>
                 <li>
                     <p class="panierCount">0</p>
                 </li>
