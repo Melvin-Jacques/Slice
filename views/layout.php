@@ -50,7 +50,11 @@
                 </li>
                 <li><a href="?page=basket"><img class="panierlogo" src="assets/src/shoppinglogo.png" alt="shopping-logo.png"></a></li>
             </ul>
-            <a href="?page=login"><img src="assets/src/gmail.png" class="compte" alt="compte"></a>
+            <a href="<?php if(empty($_SESSION['user']['username'])){
+                echo '?page=login';
+            } else {
+                echo '?page=home';
+            } ?>"><img src="assets/src/gmail.png" class="compte" alt="compte"></a>
         </navbar>
     </header>
     <hr class="headerhr" />

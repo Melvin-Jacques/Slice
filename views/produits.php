@@ -29,7 +29,7 @@
             </div>
             <div class="container">
                 <div class="divAcces">
-                    <a href="?page=produits" class="btnAcces" id="form">Ajouter au panier - <?= $produit->getPrix() ?> €</a>
+                    <a href="" class="btnAcces" id="form" data-nom="<?= $produit->getNom() ?>" data-prix="<?= $produit->getPrix() ?>">Ajouter au panier - <?= $produit->getPrix()  ?> €</a>
                 </div>
             </div>
         </div>

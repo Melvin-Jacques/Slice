@@ -4,6 +4,7 @@
             <div class="center">
                 <h1>Register</h1>
                 <form action="" method="POST">
+                    <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>">
                     <div class="txt_field">
                         <input type="text" name="username" required>
                         <span></span>

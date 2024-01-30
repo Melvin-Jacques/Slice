@@ -1,10 +1,10 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     if (empty($_POST['username'])) {
-        echo "<p style='color: red;'>The name is empty<p>";
+        echo "<p style='color: red;'>The username is empty<p>";
     }
     if (strlen($_POST['username']) > 16) {
-        echo "<p style='color: red;'>The name is too long (16 caracters max !)<p>";
+        echo "<p style='color: red;'>The username is too long (16 caracters max !)<p>";
     }
     if (empty($_POST['email'])) {
         echo "<p style='color: red;'>The email is empty<p>";
@@ -19,27 +19,41 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         echo "<p style='color: red;'>The passwords are not the same<p>";
     }
 
-    $stmt = $bdd->prepare('SELECT COUNT(*) FROM users WHERE email = ?');
-    $stmt->execute(array($_POST['email']));
-    if ($stmt->fetchColumn() == 0) {
-        echo "p style='color: red;'>This email is already taken ! Choose another</p>";
-    } else {
-        if (!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password'])) {
-            $stmt = 'INSERT INTO users (username, email, password) VALUES (:username, :email, :password)';
+    $check_email = $bdd->prepare("SELECT COUNT(*) as count FROM users WHERE email = :email");
+    $check_email->bindParam(':email', $_POST['email']);
+    $check_email->execute();
+    $email_exists = $check_email->fetch();
 
-            $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $check_email->execute();
 
-            $data = $bdd->prepare($stmt);
+    if ($check_email) {
+        $email_exists = $check_email->fetch();
 
-            $data->bindParam(':username', $_POST['username']);
-            $data->bindParam(':email', $_POST['email']);
-            $data->bindParam(':password', $hashedPassword);
-            $data->execute();
+        if ($email_exists['count'] > 0) {
+            echo 'Cet email est déjà utilisé. Veuillez en choisir un autre.';
+        } else {
+            if (!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['password'])) {
 
-            $_SESSION['success_message'] = 'Votre profil a été créé avec succès. Connectez-vous maintenant!';
-            header('location : ?page=login');
-            exit();
+                $stmt = 'INSERT INTO users (username, email, password) VALUES (:username, :email, :password)';
+
+                $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+                $infocheck = $bdd->prepare($stmt);
+
+                $infocheck->bindParam(':username', htmlspecialchars($_POST['username']));
+                $infocheck->bindParam(':email', htmlspecialchars($_POST['email']));
+                $infocheck->bindParam(':password', htmlspecialchars($hashedPassword));
+                $infocheck->execute();
+
+                $_SESSION['success_message'] = 'Votre profil a été créé avec succès. Connectez-vous maintenant!';
+                header('location: ?page=login');
+                exit();
+            }
         }
+    } else {
+        echo 'Error executing the email check query.';
     }
 }
+
+
 require "views/register.php";

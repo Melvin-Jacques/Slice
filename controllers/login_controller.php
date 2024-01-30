@@ -5,10 +5,14 @@ if (isset($_SESSION['success_message'])) {
     echo '<script>alert("' . $_SESSION['success_message'] . '")</script>';
     unset($_SESSION['success_message']);
 }
-//erreur d'internale servor a regler sur le register_controller
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
     echo '<pre>';
-    print_r($_POST['name']);
+    // Check if 'username' key is set before accessing it
+    if (isset($_POST['email'])) {
+        print_r($_POST['email']);
+    } else {
+        echo 'Username not set in the POST data.';
+    }
     echo '</pre>';
 }
 if(!empty($_POST['email']) && !empty($_POST['password'])){

@@ -12,8 +12,8 @@
                     </div>
                 </td>
                 <td class="cell">
-                    <div>Test name</div>
-                    <div> test prix</div>
+                    <div><?= $_SESSION['cart']['nom'] ?></div>
+                    <div><?= $_SESSION['cart']['prix'] ?></div>
                     <div> test quantité</div>
                     <div> test prix total</div>
                     <div>
@@ -22,6 +22,7 @@
                     </div>
                 </td>
             </tr>
+            <script src="assets/script/basket.js"></script>
         </table> 
     </div>
 </section>
