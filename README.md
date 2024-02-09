@@ -26,4 +26,7 @@ Infos :
 - User : user@user.com
   Mot de passe = user
 
+
+> Le projet se situe dans la branche master pour l'instant
+
 Merci pour votre attention
