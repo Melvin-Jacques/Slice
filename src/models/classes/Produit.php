@@ -1,6 +1,6 @@
 <?php
-namespace slice\classes;
-use slice\classes\Ingredient;
+namespace slice\src\models\classes;
+use slice\src\models\classes\Ingredients;
 
 class Produit extends Ingredient{
     private $_id;

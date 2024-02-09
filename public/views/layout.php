@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slice</title>
-    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="public/assets/styles/style.css">
 </head>
 
 <body>
     <header>
         <div>
-            <a href="?route=home"><img class="logo" src="assets/src/slice.png" alt="logo"></a>
+            <a href="?route=home"><img class="logo" src="public/assets/images/slice.png" alt="logo"></a>
         </div>
         <navbar class="navbar">
             <ul class="navbar">
@@ -35,8 +35,8 @@
                         } ?>
                     </a>
                     <div class="dropdown-content">
-                        <a href="?page=compte" style="color: crimson;">Commandes</a>
-                        <a href="?page=commandes" style="color: crimson;">Messages</a>
+                        <a href="?page=commandes" style="color: crimson;">Commandes</a>
+                        <a href="?page=messages" style="color: crimson;">Messages</a>
                         <?php if (!empty($_SESSION['user'])) { ?>
                             <a href="?page=home&logout=1">Déconnexion</a>
                         <?php } else {?>
@@ -48,22 +48,20 @@
                 <li>
                     <p class="panierCount">0</p>
                 </li>
-                <li><a href="?page=basket"><img class="panierlogo" src="assets/src/shoppinglogo.png" alt="shopping-logo.png"></a></li>
+                <li><a href="?page=basket"><img class="panierlogo" src="public/assets/images/shoppinglogo.png" alt="shopping-logo.png"></a></li>
             </ul>
             <a href="<?php if(empty($_SESSION['user']['username'])){
                 echo '?page=login';
             } else {
                 echo '?page=home';
-            } ?>"><img src="assets/src/gmail.png" class="compte" alt="compte"></a>
+            } ?>"><img src="public/assets/images/gmail.png" class="compte" alt="compte"></a>
         </navbar>
     </header>
     <hr class="headerhr" />
 
-
     <main>
-        <?php require "controllers/" . $route . "_controller.php"; ?>
+        <?php require "src/controllers/" . $route . "_controller.php"; ?>
     </main>
-
 
     <footer>
         <div>

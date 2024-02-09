@@ -40,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
                 $infocheck = $bdd->prepare($stmt);
 
-                $infocheck->bindParam(':username', htmlspecialchars($_POST['username']));
-                $infocheck->bindParam(':email', htmlspecialchars($_POST['email']));
-                $infocheck->bindParam(':password', htmlspecialchars($hashedPassword));
+                $infocheck->bindParam(':username', $_POST['username']);
+                $infocheck->bindParam(':email', $_POST['email']);
+                $infocheck->bindParam(':password', $hashedPassword);
                 $infocheck->execute();
 
                 $_SESSION['success_message'] = 'Votre profil a été créé avec succès. Connectez-vous maintenant!';
@@ -56,4 +56,4 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 }
 
 
-require "views/register.php";
+require "public/views/global/register.php";

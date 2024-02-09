@@ -16,4 +16,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Méthode non autorisée.";
 }
 
-include 'views/basket.php';
+include 'public/views/global/basket.php';

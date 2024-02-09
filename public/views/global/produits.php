@@ -5,7 +5,7 @@
         $calories = 0;
     ?>
         <div class="card">
-            <img src="assets/src/<?= $produit->getImage() ?>" class="menuImg" alt="pizza_menu" style="width:100%">
+            <img src="public/assets/images/<?= $produit->getImage() ?>" class="menuImg" alt="pizza_menu" style="width:100%">
             <h2><?= $produit->getNom() ?></h2>
             <div class="container description">
                 <p><?= $produit->getDescription() ?></p>

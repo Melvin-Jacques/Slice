@@ -1,6 +1,6 @@
 <?php
-require_once './classes/ProduitManager.php';
-use slice\classes\ProduitManager;
+require_once './src/models/classes/ProduitManager.php';
+use slice\src\models\classes\ProduitManager;
 if (isset($_REQUEST)) {
     $request = "SELECT produits.id AS produit_id, produits.name AS produit_nom, produits.description AS produit_description, produits.price AS produit_prix, produits.pic_name AS produit_image,
                  ingredients.id AS ingredient_id, ingredients.name AS ingredient_nom, ingredients.calories_100g AS ingredient_calories, ingredients.weight AS ingredient_poids
@@ -32,4 +32,4 @@ if (isset($_REQUEST)) {
     $produits = $produitManager->creerProduits($result);
 }
 
-include 'views/produits.php';
+include 'public/views/global/produits.php';

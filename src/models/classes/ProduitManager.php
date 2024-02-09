@@ -1,7 +1,7 @@
 <?php
-namespace slice\classes;
-use slice\classes\Produit;
-use slice\classes\Ingredient;
+namespace slice\src\models\classes;
+use slice\src\models\classes\Produit;
+use slice\src\models\classes\Ingredient;
 class ProduitManager{
     public static function creerProduits($donnees) {
         $produits = [];

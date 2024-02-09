@@ -32,4 +32,4 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
     }
 }
 
-include 'views/login.php';
+include 'public/views/global/login.php';

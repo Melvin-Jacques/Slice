@@ -1,6 +1,6 @@
 <section class="menu">
             <div class="card">
-                <img src="assets/src/pizza_menu.jpg" class="menuImg" alt="pizza_menu" style="width:100%">
+                <img src="public/assets/images/pizza_menu.jpg" class="menuImg" alt="pizza_menu" style="width:100%">
                 <h2>🍕Pizzas🍕</h2>
                 <div class="container">
                     <p>Goutez aux pizzas de la mama</p>
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="assets/src/frites_menu.jpg" class="menuImg" alt="pizza_menu" style="width:100%">
+                <img src="public/assets/images/frites_menu.jpg" class="menuImg" alt="pizza_menu" style="width:100%">
                 <h2>🍟Accompagnements🍟</h2>
                 <div class="container">
                     <p>Accompagnez vos pizzas</p>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
             </div><div class="card">
-                <img src="assets/src/soda_menu.jpg" class="menuImg" alt="pizza_menu" style="width:100%">
+                <img src="public/assets/images/soda_menu.jpg" class="menuImg" alt="pizza_menu" style="width:100%">
                 <h2>🥤Boissons🥤</h2>
                 <div class="container">
                     <p>N'oubliez pas de vous désaltérer un coup</p>

@@ -1,5 +1,5 @@
 <?php
-namespace slice\classes;
+namespace slice\src\models\classes;
 class Ingredient {
      private $_id;
      private $_nom;
