@@ -1,5 +1,5 @@
 # Slice
-### Allez sur la branche master pour voir le code
+### *Allez sur la branche master pour voir le code*
 Projet FullStack de création de site marchand vendeur de Pizza.
 
 Bonjour,
